@@ -1,7 +1,7 @@
 # Represents properties and operations related to a geometric line
 class Line
 	attr_reader :end_point1, :end_point2
-	def initialize (end_point1,end_point2)
+	def initialize(end_point1,end_point2)
 		@end_point1 = end_point1
 		@end_point2 = end_point2
 	end
