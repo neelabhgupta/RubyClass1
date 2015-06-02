@@ -1,16 +1,18 @@
+# Represents properties and operations related to a geometric line
 class Line
-	def initialize(x1, x2, y1, y2)
-		@x1=x1
-		@x2=x2
-		@y1=y1
-		@y2=y2
+	attr_reader :end_point1, :end_point2
+	def initialize (end_point1,end_point2)
+		@end_point1 = end_point1
+		@end_point2 = end_point2
 	end
 
-	def lenth_of_line
-		Math.hypot(@x2-@x1,@y2-@y1)
+	def length
+		@end_point1.distance(@end_point2)
+		
 	end
 
-	def self.length_with_args(x1,x2,y1,y2)
-		Math.hypot(x2-x1,y2-y1)
+	def ==(compare)
+		(@end_point1 == compare.end_point1 && @end_point2 == compare.end_point2) || 
+		(@end_point1 == compare.end_point2 && @end_point2 == compare.end_point1) if compare && compare.class == self.class
 	end
 end
