@@ -15,4 +15,20 @@ describe Rectangle do
     expect(rectangle.perimeter).not_to eq(4)
   end
 
+  it "takes length,breadth of a Rectangle as 4,1 and checks area equals to 4" do
+    length = 4 
+    breadth = 1
+    rectangle = Rectangle.new(length, breadth)
+    expect(rectangle.area).to eq(4)
+  end
+
+  it "takes length,breadth of a Rectangle as 4,1 and checks area equals to 1" do
+    length = 4 
+    breadth = 1
+    rectangle = Rectangle.new(length, breadth)
+    expect(rectangle.area).not_to eq(1)
+  end
+
+
+
 end 
