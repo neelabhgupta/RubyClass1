@@ -2,9 +2,10 @@
 class Rectangle
   attr_reader :length, :breadth
 
-  def initialize(length, breadth)
-    @length = length
-    @breadth = breadth
+  def initialize(point1, point2)
+    
+    @length = (point1.x - point2.x).abs
+    @breadth = (point1.y - point2.y).abs
   end
 
   def perimeter
