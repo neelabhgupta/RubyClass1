@@ -15,4 +15,12 @@ class Line
 		(@end_point1 == compare.end_point1 && @end_point2 == compare.end_point2) || 
 		(@end_point1 == compare.end_point2 && @end_point2 == compare.end_point1) if compare && compare.class == self.class
 	end
+
+	def hash
+		[@end_point1, @end_point2].hash
+	end
+
+	def eql?(other_object)
+		self == other_object
+	end
 end

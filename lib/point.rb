@@ -23,6 +23,10 @@ class Point
 		arr << @x
 		arr << @y
 		arr.hash
+	end
+
+	def eql?(other_object)
+		self == other_object		
 	end	
 
 end
