@@ -48,5 +48,9 @@ describe Point do
 		expect(point1.hash).to_not eq(point2.hash)
 	end
 
-	
+	it "given delta displacement find the new point" do
+		point1 = Point.new(4,3)
+		point2 = Point.new(3,4)
+		expect(point1.with_delta(-1,1)).to eq(point2)
+	end
 end

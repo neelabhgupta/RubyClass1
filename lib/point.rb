@@ -27,6 +27,10 @@ class Point
 
 	def eql?(other_object)
 		self == other_object		
-	end	
+	end
 
+	#immutable as we return a new point
+	def with_delta(delta_x , delta_y)
+		Point.new(x + delta_x, y + delta_y)
+	end	
 end
